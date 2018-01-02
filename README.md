@@ -97,4 +97,23 @@ I have 8 core CPU machine, so I can use
 ```
 $ make -j8
 ```
-
+Install and setup
+```
+$ sudo make install
+$ sudo ldconfig
+$ ls -l /usr/local/lib/python2.7/site-packages/
+$ cd ~/.virtualenvs/cv/lib/python2.7/site-packages/
+$ ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+```
+Test new installation in new terminal
+```
+(cv) rainbow@ThinkStation-D10:~$ python
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.3.1'
+>>> 
+```
+Finally, remove the opencv source file and zip files as needed.
