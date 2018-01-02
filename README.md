@@ -81,6 +81,20 @@ $ mkvirtualenv cv -p python2
 Open a new terminal, work on your new environment 
 ```
 $ workon cv
+$ pip install numpy
+$ cd ~/opencv-3.4.0/
+$ mkdir build
+$ cd build
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D INSTALL_C_EXAMPLES=ON \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.4.0/modules \
+    -D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python \
+    -D BUILD_EXAMPLES=ON ..
 ```
-
+I have 8 core CPU machine, so I can use
+```
+$ make -j8
+```
 
