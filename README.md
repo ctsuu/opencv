@@ -1,7 +1,7 @@
 # opencv
 opencv tutorial for machine learning
 
-Setup a Jupyter Notebook on Ubuntu 16.04
+## Setup a Jupyter Notebook on Ubuntu 16.04
 
 Install Python 2.7 and Pip
 ```
@@ -26,4 +26,12 @@ $ sudo -H pip install jupyter
 Launch Jupyter Notebook
 ```
 jupyter notebook
+```
+
+## Install OpenCV
+```
+
+
+
+
 ```
