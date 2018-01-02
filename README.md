@@ -32,6 +32,7 @@ jupyter notebook
 
 
 ## Install OpenCV from source
+Reproduce the result from: 
 https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/
 ```
 $ sudo apt-get update
@@ -47,3 +48,39 @@ $ sudo apt-get install libgtk-3-dev
 $ sudo apt-get install libatlas-base-dev gfortran
 $ sudo apt-get install python2.7-dev python3.5-dev
 ```
+Download the package
+```
+$ wget https://github.com/opencv/opencv/archive/3.4.0.zip
+$ unzip 3.4.0.zip
+
+$ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.4.0.zip
+$ unzip opencv_contrib.zip
+```
+Setup Python environment
+```
+$ cd ~
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python get-pip.py
+$ sudo -H pip install virtualenv virtualenvwrapper
+$ sudo rm -rf ~/get-pip.py ~/.cache/pip
+```
+Add the following lines to ./bashrc 
+```
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+```
+Open a new terminal
+```
+$ source ~/.bashrc
+```
+Create your own environment
+```
+$ mkvirtualenv cv -p python2
+```
+Open a new terminal, work on your new environment 
+```
+$ workon cv
+```
+
+
